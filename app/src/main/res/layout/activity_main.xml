@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#032B47"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/eitx_Pantalla"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/pantalla"
+        android:clickable="false"
+        android:editable="true"
+        android:ems="10"
+        android:enabled="true"
+        android:focusableInTouchMode="false"
+        android:gravity="center_vertical|end"
+        android:inputType="number|numberDecimal"
+        android:text="@string/datoInicial"
+        android:textColor="#000000"
+        android:textColorHighlight="#03A9F4"
+        android:textColorHint="#03A9F4"
+        android:textColorLink="#03A9F4"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eitx_Pantalla">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bt_BorrarMemoria"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/boton_operaciones"
+                android:onClick="memoria"
+                android:text="MC" />
+
+            <Button
+                android:id="@+id/bt_SumarMemoria"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/boton_operaciones"
+                android:onClick="memoria"
+                android:text="M+" />
+
+            <Button
+                android:id="@+id/bt_RestarMemoria"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/boton_operaciones"
+                android:onClick="memoria"
+                android:text="M-" />
+
+            <Button
+                android:id="@+id/bt_MostrarMemoria"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/boton_operaciones"
+                android:onClick="memoria"
+                android:text="MR" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bt_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_numero"
+                android:onClick="numero"
+                android:text="@string/bt_7"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_numero"
+                android:onClick="numero"
+                android:text="@string/bt_8"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_numero"
+                android:onClick="numero"
+                android:text="@string/bt_9"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_Division"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_operaciones"
+                android:clickable="false"
+                android:onClick="signo"
+                android:text="@string/bt_Division"
+                android:textSize="30sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bt_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_numero"
+                android:onClick="numero"
+                android:text="@string/bt_4"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_numero"
+                android:onClick="numero"
+                android:text="@string/bt_5"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_numero"
+                android:onClick="numero"
+                android:text="@string/bt_6"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_Multiplicacion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_operaciones"
+                android:clickable="false"
+                android:onClick="signo"
+                android:text="@string/bt_Multiplicacion"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bt_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_numero"
+                android:onClick="numero"
+                android:text="@string/bt_1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_numero"
+                android:onClick="numero"
+                android:text="@string/bt_2"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_numero"
+                android:onClick="numero"
+                android:text="@string/bt_3"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_Resta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_operaciones"
+                android:clickable="false"
+                android:onClick="signo"
+                android:text="@string/bt_Resta"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bt_Borrar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_especial"
+                android:onClick="numero"
+                android:text="@string/bt_Borrar"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_numero"
+                android:onClick="numero"
+                android:text="@string/bt_0"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_Igual"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_especial"
+                android:clickable="false"
+                android:onClick="signo"
+                android:text="@string/bt_Igual"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_Suma"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/boton_operaciones"
+                android:clickable="false"
+                android:onClick="signo"
+                android:text="@string/bt_Suma"
+                android:textSize="30sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
